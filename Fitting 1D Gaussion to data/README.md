@@ -9,8 +9,9 @@
     <i><a href="http://vlm1.uta.edu/~athitsos/courses/cse6363_spring2017/assignments/uci_datasets/">UCI dataset</a></i> directory
 </pre>
  
-     A description of the datasets and the file format can be found on this link. 
-    As the description states, do NOT use data from the last column (i.e., the class labels) in your calculations. In these files, all columns except for the last one contain example inputs. The last column contains the class label.
+    A description of the datasets and the file format can be found on this link. 
+    As the description states, do NOT use data from the last column (i.e., the class labels) in your calculations. 
+    In these files, all columns except for the last one contain example inputs. The last column contains the class label.
 
     The output of your code should contain one line for each dimension of each class. Such a line should look like this:
     Class %d, dimension %d, mean = %.2f, variance = %.2f
