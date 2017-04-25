@@ -1,6 +1,6 @@
 ### Task 1 (100 points)
 
-    In this task you will implement decision trees and decision forests. Your program will learn decision trees from training data and       will apply decision trees and decision forests to classify test objects.
+    In this task you will implement decision trees and decision forests. Your program will learn decision trees from training data and  will apply decision trees and decision forests to classify test objects.
     Your zip file should have a folder called decision_trees, which contains your code and the README.txt file.
 
 ### Command-line Arguments
