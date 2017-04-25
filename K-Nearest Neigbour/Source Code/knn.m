@@ -24,7 +24,7 @@ function [] = knn(train_data, test_data, train_target, test_target, k)
             k_neighbours = dist(1:k, :);            
             if size(unique(k_neighbours(:, 2))) == 1
                 predicted = unique(k_neighbours(:, 2));
-            elseif unique(k_neighbours(:, 2)) == k
+            elseif size(unique(k_neighbours(:, 2))) == k
                 predicted = k_neighbours(1, 2);
             else
                 predicted = mode(k_neighbours(:, 2));
