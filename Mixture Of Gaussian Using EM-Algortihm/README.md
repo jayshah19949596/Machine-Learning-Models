@@ -34,6 +34,7 @@
     Attributes and Gaussians should be numbered starting from 0, not from 1.
     In your answers.pdf document, provide the output produced by the training stage of your program when given yeast_training.txt as the input file, using three Gaussians for each mixture.
     
+    
 ### Classification
 
       For each test object you should print a line containing the following info:
@@ -54,3 +55,10 @@
       For Python or any other language, just make sure that you use formatting specifies that produce aligned output that matches the specs given for C and Java.
       Object IDs should be numbered starting from 0, not 1.
       After you have printed the results for all test objects, you should print the overall classification accuracy, which is defined as the average of the classification accuracies you printed out for each test object. 
+      
+ ### Running The Program 
+        For Mixture of Gaussians:
+            1) type "python naive_bayes.py"
+            2) press enter.
+            3) type "naive_bayes yeast_training.txt yeast_test.txt mixtures 3"
+            4) press enter.
