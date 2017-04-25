@@ -15,6 +15,5 @@
   
   ### Running The Program 
   
-      Execution commands:
-
+   Execution commands:
        -python frequentist_estimate1.py
