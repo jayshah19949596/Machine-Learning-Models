@@ -21,7 +21,13 @@
     For each dataset, a training file and a test file are provided. 
     The name of each file indicates what dataset the file belongs to, and whether the file contains training or test data. 
     Your code should also work with ANY OTHER training and test files using the same format as the files in the UCI datasets directory.
-
+    A description of the datasets and the file format can be found on this link. 
+    
+<pre>
+    <i><a href="http://vlm1.uta.edu/~athitsos/courses/cse6363_spring2017/assignments/uci_datasets/">UCI dataset</a></i> directory
+</pre>
+ 
+    
 ### Converting to Binary Classification Problem
 
         We have only covered logistic regression for binary classification problems. In this assignment, you should convert the class labels found in the files as follows:
