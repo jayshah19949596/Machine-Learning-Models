@@ -3,7 +3,7 @@
 In this task you will implement 1-nearest neighbor classification of time series using dynamic time warping (DTW) as the distance measure.
 Your zip file should have a folder called dtw_classification, which contains your code and the README.txt file.
 
-Command-line Arguments
+### Command-line Arguments
 
 Your program will be invoked as follows:
 dtw_classify <training_file> <test_file>
@@ -36,11 +36,12 @@ dominant hand trajectory:
 The object ID for that object is 40. The class label is 53, so classification of that object is correct if and only if its nearest neighbor among the training objects also has class label 53. In the example training and test files, for every test object there are only two training objects with the same class label.
 Each time series is a sequence of two-dimensional vectors. For the example shown above (test example 40), after the line with text "dominant hand trajectory", there is a sequence of 17 lines. The n-th line in that sequence contains the value of the n-th vector in the time series. Different objects have different length.
 
-Implementation Guidelines
+### Implementation Guidelines
 
 In contrast to the previous assignment, do NOT do any type of normalization on the time series values that you read from the files. Just use those values as they are.
 Use the L2 distance (the Euclidean distance) for computing the cost of matching two 2D vectors to each other. Use DTW, as described in the course slides, to compute the distance between two time series.
-Classification Stage
+
+### Classification Stage
 
 For each test object you should print a line containing the following info:
 object ID. This number is explicitly stated in the file for each object. Note that object IDs are numbered starting from 1.
@@ -53,24 +54,20 @@ If there were ties in your classification result, and the correct class was one 
 If there were ties in your classification result, and the correct class was NOT one of the classes that tied for best, the accuracy is 0.
 the DTW distance of the test object to its nearest neighbor in the training objects.
 To produce this output in a uniform manner, use these printing statements:
-For C or C++, use:
+Use:
 printf("ID=%5d, predicted=%3d, true=%3d, accuracy=%4.2lf, distance = %.2lf\n", object_id, predicted_class, true_class, accuracy, distance);
-For Java, use:
-System.out.printf("ID=%5d, predicted=%3d, true=%3d, accuracy=%4.2f, distance = %.2f\n", object_id, predicted_class, true_class, accuracy, distance);
 
-For Python or any other language, just make sure that you use formatting specifies that produce aligned output that matches the specs given for C and Java.
+
 After you have printed the results for all test objects, you should print the overall classification accuracy, which is defined as the average of the classification accuracies you printed out for each test object. To print the classification accuracy in a uniform manner, use these printing statements:
-For C or C++, use:
+use:
 printf("classification accuracy=%6.4lf\n", classification_accuracy);
-For Java, use:
-System.out.printf("classification accuracy=%6.4f\n", classification_accuracy);
 
-For Python or any other language, just make sure that you use formatting specifies that produce aligned output that matches the specs given for C and Java.
-Output for answers.pdf
+### Output for answers.pdf
 
 In your answers.pdf document, you need to provide the COMPLETE output for the following invocation of your program:
 dtw_classify asl_training.txt asl_test.txt
-Grading
+
+### Grading
 
 75 points: Correct implementation of the 1-nearest neighbor classifier with DTW as the distance measure.
 25 points: Following the specifications in producing the required output and in producing the answers.pdf file.
