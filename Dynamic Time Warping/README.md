@@ -71,3 +71,8 @@ dtw_classify asl_training.txt asl_test.txt
 
 75 points: Correct implementation of the 1-nearest neighbor classifier with DTW as the distance measure.
 25 points: Following the specifications in producing the required output and in producing the answers.pdf file.
+
+### Running The Program 
+1) open "main.m"
+2) type main('asl_training.txt', 'asl_test.txt') in the command window
+3) press enter.
