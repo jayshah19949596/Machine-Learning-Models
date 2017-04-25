@@ -32,3 +32,23 @@
     Notice that the width of the bin appears in the denominator of that equation. As mentioned above, the minimum width should be 0.0001. If your value of G is less than 0.0001, you should set G to 0.0001.
 
     In your answers.pdf document, provide the output produced by the training stage of your program when given yeast_training.txt as the input file, using seven bins for each histogram.
+    
+### Classification
+
+    For each test object you should print a line containing the following info:
+    object ID. This is the line number where that object occurs in the test file. Start with 0 in numbering the objects, not with 1.
+    predicted class (the result of the classification). If your classification result is a tie among two or more classes, choose one of them randomly.
+    probability of the predicted class given the data.
+    true class (from the last column of the test file).
+    accuracy. This is defined as follows:
+    If there were no ties in your classification result, and the predicted class is correct, the accuracy is 1.
+    If there were no ties in your classification result, and the predicted class is incorrect, the accuracy is 0.
+    If there were ties in your classification result, and the correct class was one of the classes that tied for best, the accuracy is 1 divided by the number of classes that tied for best.
+    If there were ties in your classification result, and the correct class was NOT one of the classes that tied for best, the accuracy is 0.
+    To produce this output in a uniform manner, use these printing statements:
+    For C or C++, use:
+    printf("ID=%5d, predicted=%3d, probability = %.4lf, true=%3d, accuracy=%4.2lf\n", 
+           object_id, probability, predicted_class, true_class, accuracy);
+    For Java, use:
+    System.out.printf("ID=%5d, predicted=%3d, probability = %.4f, true=%3d, accuracy=%4.2f\n", 
+                      object_id, predicted_class, probability, true_class, accuracy);
