@@ -16,3 +16,8 @@
     This is the value of λ that you should use for regularization. If λ = 0, then no regularization is used.
     The training file is a text file, containing data in tabular format. Each value is a number, and values are separated by white space. 
     Each row contains two numbers: the first of those numbers is the training input, and the second of those numbers is the target output.
+    
+### Running the Program
+     Run linear_regression.m
+     In command Window type : 
+            - linear_regression('sample_data1.txt', degree, lambda)
