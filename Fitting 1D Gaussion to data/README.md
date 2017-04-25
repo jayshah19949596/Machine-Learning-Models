@@ -8,3 +8,10 @@
   Class %d, dimension %d, mean = %.2f, variance = %.2f
   
   In your answers.pdf document, provide the output produced by your program when given yeast_training.txt as the input file
+
+### Running The Program 
+
+  Commands to Execute:
+
+  python gaussian_1d.py
+  yeast_training.txt(or the path to any other file as user input)
