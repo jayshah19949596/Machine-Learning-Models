@@ -19,17 +19,33 @@ function [] = main(train_file, test_file)
             train_cord(all(train_cord == 0, 2), :)=[];
             m = size(train_cord, 1);
             c = zeros(m, n);
-            c(1, 1) = dist(train_cord(1, 1), test_cord(1, 1), train_cord(1, 2), test_cord(1, 2));
+            x1 = train_cord(1, 1);
+            x2 = test_cord(1, 1);
+            y1 = train_cord(1, 2);
+            y2 = test_cord(1, 2);
+            c(1, 1) = dist(x1, x2, y1, y2);
             for k = 2:m
-                c(k, 1) = c(k-1, 1) + dist(train_cord(k, 1), test_cord(1, 1), train_cord(k, 2), test_cord(1, 2));
+                x1 = train_cord(k, 1);
+                x2 = test_cord(1, 1);
+                y1 = train_cord(k, 2);
+                y2 = test_cord(1, 2);
+                c(k, 1) = c(k-1, 1) + dist(x1, x2, y1, y2);
             end
 
             for l = 2:n
-                c(1, l) = c(1, l-1) + dist(train_cord(1, 1), test_cord(l, 1), train_cord(1, 2), test_cord(l, 2));
+                x1 = train_cord(1, 1);
+                x2 = test_cord(l, 1);
+                y1 = train_cord(1, 2);
+                y2 = test_cord(l, 2);
+                c(1, l) = c(1, l-1) + dist(x1, x2, y1, y2);
             end
             for p = 2:m
                for q = 2:n
-                   c(p, q)= min([c(p-1, q) c(p, q-1) c(p-1, q-1)]) + dist(train_cord(p, 1), test_cord(q, 1), train_cord(p, 2), test_cord(q, 2));
+                   x1 = train_cord(p, 1);
+                   x2 = test_cord(q, 1);
+                   y1 = train_cord(p, 2);
+                   y2 = test_cord(q, 2);
+                   c(p, q)= min([c(p-1, q) c(p, q-1) c(p-1, q-1)]) + dist(x1, x2, y1, y2);
                end
             end
             cost(j, 1) = c(m, n);
