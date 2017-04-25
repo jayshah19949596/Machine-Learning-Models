@@ -61,21 +61,21 @@ class HistogramTraining:
 	def bining(column_number, total_bins, data_list):
 		""" performs binning on given dimension
 			Parameters
-			----------
+			--------------------------------------------------
 			column_number :    int
-						       dimension number
+					   dimension number
 			total_bins    :    int
-							   number of bins to be created
-			data_list	  :    list
-							   list of training data
+				           number of bins to be created
+			data_list     :    list
+					   list of training data
 
 
-		    Returns
-		    -------
+		    	Returns
+		    	--------------------------------------------------
 			bin_list  : list
-		                list of list containing the range of the bin for the given dimension
-		    bin_range : float
-		    			range for each bin in binning
+		                    list of list containing the range of the bin for the given dimension
+		    	bin_range : float
+		    		    range for each bin in binning
 		"""
 		
 		bin_list = []
@@ -104,13 +104,13 @@ class HistogramTraining:
 		""" changes the data to the bin number indicating which bin does the data goes in
 		
 			Parameters
-			----------
+			--------------------------------------------------
 			column_bin_dic :    dictionary
 
 			data_dic       :    dictionary
 							    
-		    Returns
-		    -------
+		    	Returns
+		   	--------------------------------------------------
 			data_dic  : dictionary
 		                
 		"""
@@ -131,17 +131,17 @@ class HistogramTraining:
 		"""Calculates probability of class labels
 
 		Parameters
-		----------
+		--------------------------------------------------
 		unique_labels        :    list
-					              contains list of unique class labels.
+					  contains list of unique class labels.
 		total_number_of_rows :    int
-								  number of samples in the training data
-		data_dic			 :    dictionary
+					  number of samples in the training data
+		data_dic	     :    dictionary
 
 		Returns
-		-------
+		--------------------------------------------------
 		probability_dic      : 	dictionary
-							   	class labels are key and their probabilities are dictionary
+					class labels are key and their probabilities are dictionary
 		"""
 		probability_dic = {}
 		for labels in unique_labels:
@@ -180,16 +180,16 @@ class HistogramTraining:
 		"""calcualtes the conditional probability of P(bin|class)
 
 		Parameters
-		----------
+		--------------------------------------------------
 		data_dic        :    dictionary
 					         
 		number_of_bins  :    int
-					         number of bins for the dimension
+				     number of bins for the dimension
 		bin_range       :    int
-					         bin range of the dimension
+				     bin range of the dimension
 					         
 		Returns
-		----------
+		--------------------------------------------------
 		classifier_dic	: dictionary
 		"""
 		
@@ -274,20 +274,20 @@ def load_data_set(filename):
 	"""Loads the training data from a file to the dictionary
 
 		Parameters
-		----------
+		--------------------------------------------------
 		filename   :   string
-			       	   file path of training data
+			       file path of training data
 
 		Returns
-		-------
+		--------------------------------------------------
 		dictionary    : dictionary
-				        class label as key : list of rows as value
+				class label as key : list of rows as value
 		unique_labels : list
-		 				list of unique labels in the training data
+		 		list of unique labels in the training data
 		loop_count    : int
-						number of training samples
+				number of training samples
 		data_list     : list
-						list of training data
+				list of training data
 	"""
 	
 	data_list = []
@@ -315,14 +315,14 @@ def load_test_set(filename):
 		Parameters
 		----------
 		filename   :   string
-				       file path of training data
+			       File path of training data
 
 		Returns
 		-------
 		loop_count    : int
-						number of training samples
+				number of training samples
 		data_list     : list
-						list of training data
+				list of training data
 	"""
 	
 	data_list = []
@@ -339,7 +339,7 @@ def load_test_set(filename):
 
 def main():
 	
-	input_line = input()  								# Taking file path from user as input
+	input_line = input()  							# Taking file path from user as input
 	input_list = input_line.split()  					# converting  the input to a list
 
 	histogram = Histogram(input_list[1], input_list[2], int((input_list[4])))
