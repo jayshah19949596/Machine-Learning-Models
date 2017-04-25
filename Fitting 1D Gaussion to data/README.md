@@ -13,6 +13,8 @@
     As the description states, do NOT use data from the last column (i.e., the class labels) in your calculations. 
     In these files, all columns except for the last one contain example inputs. The last column contains the class label.
 
+### Outout
+
     The output of your code should contain one line for each dimension of each class. Such a line should look like this:
     Class %d, dimension %d, mean = %.2f, variance = %.2f
 
