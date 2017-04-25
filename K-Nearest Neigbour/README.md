@@ -1,5 +1,5 @@
 ### Task
-    In this task you will implement k-nearest neighbor classification.
+    In this task you will implement k-nearest neighbor classification using Euclidean Distance.
     
 ### Command-line Arguments
 
