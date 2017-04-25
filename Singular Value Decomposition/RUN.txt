@@ -1,0 +1,5 @@
+main('input1.txt', 2, 10)
+
+
+
+main('input1.txt', 4, 100)
