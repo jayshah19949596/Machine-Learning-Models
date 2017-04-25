@@ -13,7 +13,7 @@
     The second argument, <test_file>, is the path name of the test file, where the test data is stored. The path name can specify any file stored on the local computer.
     The third argument, <option>, can have four possible values: optimized, randomized, forest3, or forest15. It specifies how to train (learn) the decision tree, and will be discussed later.
     The fourth argument,<pruning_thr>, is a number greater than or equal to 0, that specifies the pruning threshold.
- The training and test files will follow the same format as the text files in the [UCI datasets] (http://vlm1.uta.edu/~athitsos/courses/cse6363_spring2017/assignments/uci_datasets/) directory. 
+     The training and test files will follow the same format as the text files in the ['UCI datasets'] (http://vlm1.uta.edu/~athitsos/courses/cse6363_spring2017/assignments/uci_datasets/) directory. 
     A description of the datasets and the file format can be found on this link. 
     For each dataset, a training file and a test file are provided. 
     The name of each file indicates what dataset the file belongs to, and whether the file contains training or test data. 
