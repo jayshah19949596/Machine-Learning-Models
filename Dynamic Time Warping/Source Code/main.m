@@ -1,6 +1,4 @@
-function [] = main()
-    train_file = 'asl_training.txt';
-    test_file = 'asl_test.txt';
+function [] = main(train_file, test_file)
     [train_class, train_ob_id, train_data_col1, train_data_col2, train_lenght] = read_file(train_file);
     [test_class, test_ob_id, test_data_col1, test_data_col2, test_lenght] = read_file(test_file);
     classification_accuracy = 0;
@@ -22,7 +20,6 @@ function [] = main()
             m = size(train_cord, 1);
             c = zeros(m, n);
             c(1, 1) = dist(train_cord(1, 1), test_cord(1, 1), train_cord(1, 2), test_cord(1, 2));
-            %disp(c(1, 1))
             for k = 2:m
                 c(k, 1) = c(k-1, 1) + dist(train_cord(k, 1), test_cord(1, 1), train_cord(k, 2), test_cord(1, 2));
             end
@@ -30,7 +27,6 @@ function [] = main()
             for l = 2:n
                 c(1, l) = c(1, l-1) + dist(train_cord(1, 1), test_cord(l, 1), train_cord(1, 2), test_cord(l, 2));
             end
-            %disp(c(:, 1))
             for p = 2:m
                for q = 2:n
                    c(p, q)= min([c(p-1, q) c(p, q-1) c(p-1, q-1)]) + dist(train_cord(p, 1), test_cord(q, 1), train_cord(p, 2), test_cord(q, 2));
