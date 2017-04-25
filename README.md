@@ -12,4 +12,7 @@
   7. Principal Component Analysis
   8. Fitting the data to a 1D Gaussian
   9. Fitting the data to a 2D Gaussian
+  10. K Nearest Neighbours
+  11. Linear Regression
+  12. Logistivc Regression
   
