@@ -69,7 +69,7 @@ class GaussianMixture:
 				Returns
 				-------
 				probability_dic      : dictionary
-				class labels are key and their probabilities are dictionary
+						       class labels are key and their probabilities are dictionary
 				"""
 		probability_dic = {}
 		for labels in self.unique_labels:
@@ -255,13 +255,13 @@ class GaussianMixtureTraining:
 			Parameters
 			----------
 			value     :    float
-				           value of x in f(x)
+				       value of x in f(x)
 			label     :    float
-				           class label
+				       class label
 			col       :    int
-			      		   dimension number
-			gaussian  :	   int
-				 		   gaussian number
+			      	       dimension number
+			gaussian  :    int
+				       gaussian number
 
 			Returns
 			-------
@@ -284,7 +284,7 @@ def load_data_set(filename):
 		Parameters
 		----------
 		filename   :   string
-				       file path of training data
+			       File path of training data
 
 		Returns
 		-------
@@ -345,7 +345,7 @@ def load_test_set(filename):
 
 def main():
 
-	input_line = input()								# Taking file path from user as input
+	input_line = input()							# Taking file path from user as input
 	input_list = input_line.split()  					# converting  the input to a list
 
 	gaussian_mixture = GaussianMixture(input_list[1], input_list[2], int(input_list[4]))
