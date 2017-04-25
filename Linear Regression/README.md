@@ -1,5 +1,6 @@
 ### Task
     In this task you will implement linear regression
+    Data used is in the Data folder
     
 ### Command-line Arguments
 
