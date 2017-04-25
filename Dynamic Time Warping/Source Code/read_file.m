@@ -26,7 +26,6 @@ function [class,ob_id,data_col1,data_col2,lenght] = read_file(file)
         if flag==1
             if tline ~= -1
                 pd=strsplit(string(tline));
-                %disp(pd(2))
                 col1(index,j)=double(pd(2));
                 col2(index,j)=double(pd(3));
     
@@ -42,8 +41,6 @@ function [class,ob_id,data_col1,data_col2,lenght] = read_file(file)
     class=cl;
     ob_id=obj;
     data_col1=col1;
-    %disp(data_col1);
     data_col2=col2;
-    %disp(data_col2);
     lenght=index;
 end
