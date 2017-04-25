@@ -67,7 +67,7 @@ class GaussianMixture:
 		"""Calculates probability of class labels
 				
 				Returns
-				-------
+				------------------------------------------------------
 				probability_dic      : dictionary
 						       class labels are key and their probabilities are dictionary
 				"""
@@ -253,7 +253,7 @@ class GaussianMixtureTraining:
 		"""Calculates normal distribution
 
 			Parameters
-			----------
+			------------------------------------------------------
 			value     :    float
 				       value of x in f(x)
 			label     :    float
@@ -264,7 +264,7 @@ class GaussianMixtureTraining:
 				       gaussian number
 
 			Returns
-			-------
+			------------------------------------------------------
 			normal : float
 					 normal distribution over a dimension.
 		"""
@@ -282,12 +282,12 @@ def load_data_set(filename):
 	"""Loads the training data from a file to the dictionary
 
 		Parameters
-		----------
+		------------------------------------------------------
 		filename   :   string
 			       File path of training data
 
 		Returns
-		-------
+		------------------------------------------------------
 		dictionary    : dictionary
 				class label as key : list of rows as value
 		unique_labels : list
@@ -320,12 +320,12 @@ def load_test_set(filename):
 	""""Loads the testing data from a file to the dictionary
 
 		Parameters
-		----------
+		------------------------------------------------------
 		filename   :   string
 		      	       file path of training data
 
 		Returns
-		-------
+		------------------------------------------------------
 		loop_count    : int
 				number of training samples
 		data_list     : list
