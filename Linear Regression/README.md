@@ -18,6 +18,15 @@
     The training file is a text file, containing data in tabular format. Each value is a number, and values are separated by white space. 
     Each row contains two numbers: the first of those numbers is the training input, and the second of those numbers is the target output.
     
+### Output
+    At the end, your program should print out the values of the weights that you have estimated.
+
+    For C or C++, use:
+    printf("w0=%.4lf\n", w0);
+    printf("w1=%.4lf\n", w1);
+    printf("w2=%.4lf\n", w2);
+    For any other language, just make sure that you use formatting specifies that produce aligned output that matches EXACTLY the specs given above for C. Note that you print the value of w2 even when the command-line degree argument is 1. In that case, just print 0 for w2.
+    
 ### Running the Program
      Run linear_regression.m
      In command Window type : 
