@@ -52,3 +52,10 @@
     For Java, use:
     System.out.printf("ID=%5d, predicted=%3d, probability = %.4f, true=%3d, accuracy=%4.2f\n", 
                       object_id, predicted_class, probability, true_class, accuracy);
+                  
+### Running The Program
+    For Histograms :
+        1) type "python naive_bayes.py"
+        2) press enter.
+        3) type "naive_bayes yeast_training.txt yeast_test.txt histograms 7"
+        4) press enter.
