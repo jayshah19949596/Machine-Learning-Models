@@ -11,6 +11,8 @@
  
     A description of the datasets and the file format can be found on above link.
     You should only fit a 2D Gaussian to the first two dimensions of the data. You can ignore the other dimensions.
+    
+### Output
     The output of your code should contain one line for each class. Such a line should look like this:
     Class %d, mean = [%.2f, %.2f], sigma = [%.2f, %.2f, %.2f, %.2f]
     Note that, in the above output sample, %d is a place holder for an integer, and %.2f is a placeholder for a number with two decimal digits, following the Java and C printf conventions. With sigma we denote the covariance matrix. 
