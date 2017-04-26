@@ -60,7 +60,6 @@ classdef new_nn < handle
             
             obj.phi = obj.train_data(1: end, 1: end-1);
             maximum = max(obj.phi(:));
-            % disp(maximum);
             obj.phi = (obj.phi)/(maximum);
             obj.phi = [obj.phi ones];
             
@@ -68,7 +67,6 @@ classdef new_nn < handle
             ones(ones == 0) = 1;
             obj.test_phi = obj.test_data(1: end, 1: end-1);
             maximum = max(obj.test_phi(:));
-            % disp(maximum);
             obj.test_phi = (obj.test_phi)/(maximum);
             obj.test_phi = [obj.test_phi ones];
             
@@ -77,30 +75,20 @@ classdef new_nn < handle
             obj.pred_res = zeros(size(obj.test_data, 1), 1);
             
             obj.first_wghts = -0.05 + (0.05- (-0.05)).*rand(size(obj.phi, 2), obj.no_of_units);
-            
-            %obj.first_wghts = zeros(size(obj.phi, 2), obj.no_of_units);
-            %obj.first_wghts = obj.first_wghts  + 0.025;
-            %.first_wghts(end, 1:end) = 1;
+
             
             obj.act = zeros(obj.no_of_units+1, obj.no_of_layers-2);
             obj.net = zeros(obj.no_of_units, obj.no_of_layers-2);
             
             if obj.no_of_layers > 2
                 obj.op_wghts = -0.05 + (0.05- (-0.05)).*rand(obj.no_of_units+1, obj.op_units);
-                %obj.op_wghts = zeros(obj.no_of_units+1, obj.op_units);
-                %obj.op_wghts = obj.op_wghts + 0.025;
-                %obj.op_wghts(end, 1:end) = 1;
+
             else
                 obj.op_wghts = -0.05 + (0.05- (-0.05)).*rand(size(obj.phi, 2), obj.op_units);
-                %obj.op_wghts = zeros(size(obj.phi, 2), obj.op_units);
-                %obj.op_wghts = obj.op_wghts  + 0.025;
-                %obj.op_wghts(end, 1:end) = 1;
+
             end
             
             obj.hidden_wghts = -0.05 + (0.05- (-0.05)).*rand(obj.no_of_units+1, obj.no_of_units, obj.no_of_layers-3);
-            %obj.hidden_wghts = zeros(obj.no_of_units+1, obj.no_of_units, obj.no_of_layers-3);
-            %obj.hidden_wghts(1:end, 1:end, 1:end) = obj.hidden_wghts(1:end, 1:end, 1:end)  + 0.025;
-            %obj.hidden_wghts(end, 1:end, 1:end) = 1;
             obj.delta_op = zeros(obj.op_units, 1);
         end
         
@@ -145,10 +133,7 @@ classdef new_nn < handle
             
             rate = power(obj.step,round);
             
-            %fprintf('row=%d, tg=%d, pos=%d, round=%d, rate=%6.4f', row, tg, pos, round, rate)
-            %disp('\n')
             for layer = obj.no_of_layers-1: -1: 1
-                %disp(layer)
                 if layer == obj.no_of_layers-1 && obj.no_of_layers > 2
                     for unit = 1:obj.op_units
                         if unit == pos
@@ -160,10 +145,8 @@ classdef new_nn < handle
                         delta = (o-t)*o*(1-o);
                         obj.delta_op(unit, 1) = delta;
                         for wght = 1:obj.no_of_units+1
-                            %disp(obj.act(wght, end));
                             obj.op_wghts(wght, unit) = obj.op_wghts(wght, unit) - (rate*delta*obj.act(wght, end));
                             
-                            %fprintf('unit=%d,wght=%d, delta=%6.4f, obj.act(wght, end)=%6.4f \n', unit, wght, delta, obj.act(wght, end))
                         end
                     end
                 
@@ -195,8 +178,7 @@ classdef new_nn < handle
                         for wght = 1:obj.no_of_units+1
                             obj.hidden_wghts(wght, unit, end) = obj.hidden_wghts(wght, unit, end)-rate*obj.delta*obj.act(wght, end-1);
                         end
-                    end    
-                    %disp(obj.hidden_wghts(:, :, layer-1))
+                    end 
                     
                 elseif layer < obj.no_of_layers-2 && layer > 1 && obj.no_of_layers >3
                     
@@ -222,7 +204,7 @@ classdef new_nn < handle
                         obj.delta = obj.del(unit, layer);
                         for wght = 1:size(obj.phi, 2)
                             obj.first_wghts(wght, unit) = obj.first_wghts(wght, unit)-(rate*obj.delta*obj.phi(row, wght));
-                            %fprintf('obj.delta=%6.4f, obj.phi(row, wght)=%6.4f, obj.first_wghts(row, wght)=%6.4f, rate=%d \n', obj.delta, obj.phi(row, wght), obj.first_wghts(wght, unit), rate);
+       
                         end
                     end    
                     
@@ -232,9 +214,6 @@ classdef new_nn < handle
                     for unit = 1:obj.no_of_units
                         
                         obj.del(unit, layer) = transpose(obj.del(1:end, layer+1))*transpose(obj.hidden_wghts(unit, 1:end, 1));
-                        %disp(transpose(obj.del(1:end, layer+1)));
-                        %disp(transpose(obj.hidden_wghts(unit, 1:end, 1)))
-                        %disp(obj.del(unit, layer))
                         o = obj.act(unit, 1);
                         obj.del(unit, layer) = obj.del(unit, layer)*o*(1-o);
                         obj.delta = obj.del(unit, layer);
@@ -242,7 +221,6 @@ classdef new_nn < handle
                             obj.first_wghts(wght, unit) = obj.first_wghts(wght, unit)-rate*obj.delta*obj.phi(row, wght);
                         end
                     end    
-                    %disp(obj.hidden_wghts)
                      
                     
                 end
