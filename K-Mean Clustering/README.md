@@ -15,6 +15,11 @@
     Your code should also work with ANY OTHER training and test files using the same format as the files in the UCI datasets directory.
     As the description states, do NOT use data from the last column (i.e., the class labels) as features. 
     In these files, all columns except for the last one contain example inputs. The last column contains the class label.
+    Link to data set is given below :
+    
+<pre>
+    <i><a href="http://vlm1.uta.edu/~athitsos/courses/cse6363_spring2017/assignments/uci_datasets/">UCI dataset</a></i> directory
+</pre>
     
 ### Implementation Guidelines
     Use the L2 distance (the Euclidean distance) for computing the distance between any two objects in the dataset.
