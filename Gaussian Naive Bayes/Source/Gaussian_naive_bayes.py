@@ -62,11 +62,11 @@ class GaussianTraining:
 	def calculate_mean(self):
 		""" Calculates mean of the given dimension
 
-        Returns
-        -------
-        self.mean : float
-                    mean over the given dimension
-        """
+        	Returns
+        	-------
+        	self.mean : float
+                	    mean over the given dimension
+       		"""
 
 		summation = 0
 		for elements in self.data_list:
@@ -78,10 +78,10 @@ class GaussianTraining:
 		""" Calculates variance of the given dimension
 
 		Returns
-		-------
+		----------------------------------------------------------------
 		self.variance : float
-						variance over the given dimension
-        """
+				variance over the given dimension
+        	"""
 		
 		if len(self.data_list) == 0:
 			return 0
@@ -96,14 +96,14 @@ class GaussianTraining:
 		"""Calculates normal distribution
 
 		Parameters
-		----------
+		----------------------------------------------------------
 		label : int
-				Class label.
+			Class label.
 	
 		Returns
-		-------
+		----------------------------------------------------------		
 		normal : float
-				 normal distribution over a dimension for a class label.
+			 normal distribution over a dimension for a class label.
 		"""
 		
 		if self.variance == 0:
@@ -121,15 +121,15 @@ class GaussianTraining:
 		Parameters
 		----------
 		unique_labels        :    list
-					              contains list of unique class labels.
+					  contains list of unique class labels.
 		total_number_of_rows :    int
-								  number of samples in the training data
-		data_dic			 :    dictionary
+					  number of samples in the training data
+		data_dic	     :    dictionary
 				
 		Returns
 		-------
 		probability_dic      : dictionary
-							   class labels are key and their probabilities are dictionary
+				       class labels are key and their probabilities are dictionary
 		"""
 		
 		probability_dic = {}
@@ -153,9 +153,9 @@ class GaussianClassification:
 		"""classifies a new data
 
 		Parameters
-		----------
+		-----------------------------------------------------------------
 		data_row        :    list
-					         contains unknown data to be classified
+				     contains unknown data to be classified
 		"""
 		self.normal_dic = {}
 		for label in self.unique_labels:
@@ -190,18 +190,18 @@ class GaussianClassification:
 		"""Calculates normal distribution
 
 				Parameters
-				----------
+				-------------------------------------------------------
 				value   :   float
-						    value of x in f(x)
+					    value of x in f(x)
 				mean    :   float
-						    mean of the dimension
+					    mean of the dimension
 				variance :  float
 				            variance of the dimension
 
 				Returns
-				-------
+				-------------------------------------------------------
 				normal : float
-						 normal distribution over a dimension.
+					 normal distribution over a dimension.
 		"""
 		if variance < 0.0001:
 			variance = 0.0001
@@ -218,20 +218,20 @@ def load_data_set(filename):
 	"""Loads the training data from a file to the dictionary
 
 		Parameters
-		----------
+		----------------------------------------------------
 		filename   :   string
-			       	   file path of training data
+			       file path of training data
 							       
 		Returns
-		-------
+		----------------------------------------------------
 		dictionary    : dictionary
-				        class label as key : list of rows as value
+				class label as key : list of rows as value
 		unique_labels : list
-		 				list of unique labels in the training data
+		 		list of unique labels in the training data
 		loop_count    : int
-						number of training samples
+				number of training samples
 		data_list     : list
-						list of training data
+				list of training data
 	"""
 	data_list = []
 	input_file = open(filename, "r")
@@ -256,16 +256,16 @@ def load_test_set(filename):
 	"""Loads the testing data from a file to the dictionary
 
 		Parameters
-		----------
+		----------------------------------------------------
 		filename   :   string
-				       file path of training data
+			       file path of training data
 							       
 		Returns
-		-------
+		----------------------------------------------------
 		loop_count    : int
-						number of training samples
+				number of training samples
 		data_list     : list
-						list of training data
+				list of training data
 	"""
 	data_list = []
 	input_file = open(filename, "r")
@@ -281,8 +281,8 @@ def load_test_set(filename):
 
 def main():
 	
-	input_line = input()			 					# Taking file path from user as input
-	input_list = input_line.split()  					# converting  the input to a list
+	input_line = input()	                            # Taking file path from user as input
+	input_list = input_line.split()  		    # converting  the input to a list
 
 	gaussian = Gaussian(input_list[1], input_list[2])   # making object of Gaussian
 	gaussian.train()
