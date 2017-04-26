@@ -14,5 +14,6 @@
   9. Fitting the data to a 2D Gaussian
   10. K Nearest Neighbours
   11. Linear Regression
-  12. Logistic Regression
+  12. Logistic Regression'
+  13. K-Mean Clustering
   
