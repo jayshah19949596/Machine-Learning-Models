@@ -75,7 +75,7 @@ class GaussianTraining:
 		return self.mean
 
 	def calculate_variacne(self):
-		""" Calculates mean of the given dimension
+		""" Calculates variance of the given dimension
 
 		Returns
 		-------
