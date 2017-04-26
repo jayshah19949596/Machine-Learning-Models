@@ -1,4 +1,4 @@
-### Task 1 (100 points)
+### Task 1 
 
     In this task you will implement decision trees and decision forests. 
     Your program will learn decision trees from training data and  will apply decision trees and decision forests to classify test objects.
