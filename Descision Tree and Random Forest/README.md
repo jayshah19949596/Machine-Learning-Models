@@ -69,17 +69,6 @@
     dtree pendigits_training pendigits_test randomized 50
     dtree pendigits_training pendigits_test forest3 50
     
-    
-### Grading
-
-    20 points: Correct processing of the optimized option. Identifying and choosing, for each node, the (feature, threshold) pair with the highest information gain for that node, and correctly computing that information gain.
-    10 points: Correct processing of the randomized option. In other words, identifying and choosing, for each node, an appropriate (feature, threshold) pair, where the feature is chosen randomly, and the threshold maximizes the information gain for that feature,
-    10 points: Correctly directing training objects to the left or right child of each node, depending on the (threshold, value) pair used at that node.
-    10 points: Correct application of pruning, as specified in the slides.
-    15 points: Correctly applying decision trees to classify test objects.
-    15 points: Correctly applying decision forests to classify test objects.
-    20 points: Following the specifications in producing the required output.
-   
 ### Running The Program
 
     1) open "main.m"
