@@ -12,7 +12,7 @@ function [] = dtw(train_data_col1, train_data_col2, train_class, train_lenght, t
         test_cord(all(test_cord == 0, 2), :)=[];
         n = size(test_cord, 1);
         %===============================================
-        %              For every test object
+        %              For every train object
         %===============================================
         for j = 1:train_lenght
             x = train_data_col1(j, :);
