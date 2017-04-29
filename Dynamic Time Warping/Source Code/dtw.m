@@ -73,7 +73,7 @@ function [] = dtw(train_data_col1, train_data_col2, train_class, train_lenght, t
         if true == predicted
             acc = 1;
         end
-        fprintf('ID=%5d, predicted=%3d, true=%3d, accuracy=%4.2f, distance = %.2f classification =%.4f  \n', i, predicted, true, acc, distance, classification_accuracy/test_lenght);
+        fprintf('ID=%5d, predicted=%3d, true=%3d, accuracy=%4.2f, distance = %.2f \n', i, predicted, true, acc, distance);
         classification_accuracy = classification_accuracy + acc;
     end
     fprintf('classification accuracy=%6.4f\n', classification_accuracy/test_lenght);
