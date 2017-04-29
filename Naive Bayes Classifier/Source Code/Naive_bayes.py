@@ -109,7 +109,7 @@ class HistogramTraining:
 
 			data_dic       :    dictionary
 							    
-		    	Returns
+		    Returns
 		   	--------------------------------------------------
 			data_dic  : dictionary
 		                
@@ -340,7 +340,7 @@ def load_test_set(filename):
 def main():
 	
 	input_line = input()  							# Taking file path from user as input
-	input_list = input_line.split()  					# converting  the input to a list
+	input_list = input_line.split()  				# converting  the input to a list
 
 	histogram = Histogram(input_list[1], input_list[2], int((input_list[4])))
 	histogram.train()
