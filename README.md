@@ -16,4 +16,4 @@
   11. Linear Regression
   12. Logistic Regression'
   13. K-Mean Clustering
-  
+  14. Value-Iteration-Method
